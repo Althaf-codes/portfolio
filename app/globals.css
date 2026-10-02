@@ -12,3 +12,5 @@
 /* Reveal only below-the-fold groups after enhancement; layout never moves. */
 [data-scroll-reveal][data-reveal-pending]{opacity:0}
 @media(prefers-reduced-motion:reduce){[data-scroll-reveal][data-reveal-pending]{opacity:1}}
+/* A cleaner gallery white on mobile; desktop keeps the warm pearl palette. */
+@media(max-width:760px){html body{background:#fcfcfa}}

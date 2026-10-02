@@ -1,0 +1,19 @@
+.stage{display:flex;align-items:center;justify-content:center;width:100%;height:clamp(380px,55vh,520px);padding:28px;background:#efeee9;overflow:hidden;border:1px solid var(--line)}
+.device{min-width:0;animation:arrive .4s var(--ease)}
+.device img{display:block;max-width:100%;height:auto}
+.portrait .device{height:100%;max-width:100%;width:fit-content}
+.portrait img{height:100%;width:auto;object-fit:contain}
+.phone{padding:6px;background:#232421;border:1px solid #53544f;border-radius:25px;box-shadow:0 18px 30px -15px #15161165,0 2px 4px #15161120;overflow:hidden}
+.phone img{border-radius:19px}
+.existingPhone{isolation:isolate}
+.existingPhone img{clip-path:inset(.5% 4% 1% 4% round 16% / 8%)}
+.window{width:100%;border:1px solid #42433f;border-radius:9px;overflow:hidden;background:#252623;box-shadow:0 20px 30px -16px #15161165}
+.windowBar{height:25px;display:flex;align-items:center;gap:5px;padding:0 10px;color:#d5d5cf}
+.windowBar>span{width:5px;height:5px;border-radius:50%;background:#777970}
+.windowBar small{font:9px ui-monospace,monospace;margin-left:auto}
+.artwork{width:100%}.artwork img{max-height:460px;object-fit:contain}
+.cinema{background:#232420;border-color:#34362f}.cinema .phone{border-color:#66695e;box-shadow:0 20px 30px #0005}
+@keyframes arrive{from{opacity:.7;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:760px){.stage{height:400px;padding:24px 16px;background:#f3f3f0;border-color:#e7e7e2}.landscape{height:auto;min-height:210px;padding:18px 12px}.cinema{background:#232420;border-color:#34362f}.artwork img{max-height:340px}.phone{border-radius:23px}.phone img{border-radius:17px}}
+@media(max-width:380px){.portrait{height:350px;padding:20px 12px}}
+@media(prefers-reduced-motion:reduce){.device{animation:none}}
